@@ -1,0 +1,105 @@
+<?php
+
+// Get the CodeIgniter's system environment (similar to index.php)
+define('BASEPATH', __DIR__ . '/');
+require_once('application/config/constants.php');
+require_once('application/config/config.php');
+
+// Simple CLI script to automate file generation
+if (php_sapi_name() != 'cli') {
+    exit('This script can only be run from the command line.');
+}
+
+if ($argc < 3) {
+    echo "Usage: php cli.php make:<type> <name>\n";
+    echo "Example: php cli.php make:controller MyController\n";
+    exit;
+}
+
+// Get the command and name
+$command = $argv[1];
+$name = $argv[2];
+
+switch ($command) {
+    case 'make:controller':
+        createController($name);
+        break;
+
+    case 'make:model':
+        createModel($name);
+        break;
+
+    case 'make:view':
+        createView($name);
+        break;
+
+    default:
+        echo "Unknown command. Supported commands: \nmake:controller, \nmake:model, \nmake:view\n";
+        break;
+}
+
+function createController($name)
+{
+    $path = __DIR__ . '/application/controllers/' . $name . '.php';
+    $content = <<<EOD
+        <?php
+        defined('BASEPATH') OR exit('No direct script access allowed');
+
+        class $name extends CI_Controller {
+
+            public function __construct()
+            {
+                parent::__construct();
+            }
+
+            public function index()
+            {
+                echo "Hello from $name controller!";
+            }
+        }
+    EOD;
+
+    if (file_put_contents($path, $content)) {
+        echo "Controller $name created successfully.\n";
+    } else {
+        echo "Failed to create controller.\n";
+    }
+}
+
+function createModel($name)
+{
+    $path = __DIR__ . '/application/models/' . $name . '.php';
+    $content = <<<EOD
+        <?php
+        defined('BASEPATH') OR exit('No direct script access allowed');
+
+        class $name extends CI_Model {
+
+            public function __construct()
+            {
+                parent::__construct();
+            }
+        }
+    EOD;
+
+    if (file_put_contents($path, $content)) {
+        echo "Model $name created successfully.\n";
+    } else {
+        echo "Failed to create model.\n";
+    }
+}
+
+function createView($name)
+{
+    $path = __DIR__ . '/application/views/' . $name . '.php';
+    $content = <<<EOD
+        <!-- View for $name -->
+        <h1>Hello from $name view!</h1>
+    EOD;
+
+    if (file_put_contents($path, $content)) {
+        echo "View $name created successfully.\n";
+    } else {
+        echo "Failed to create view.\n";
+    }
+}
