@@ -1752,7 +1752,7 @@ abstract class CI_DB_driver {
 		$LANG->load('db');
 
 		$heading = $LANG->line('db_error_heading');
-
+		
 		if ($native === TRUE)
 		{
 			$message = (array) $error;

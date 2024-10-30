@@ -1,79 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
 
-    <title>Access Blocked </title>
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  lang="en"
+  class="light-style"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="<?= base_url('assets/'); ?>"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
 
-    <!-- Custom fonts for this template-->
-    <link href="<?= base_url('assets/'); ?> vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <title>Error - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
-    <!-- Custom styles for this template-->
-    <link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
+    <meta name="description" content="" />
 
-</head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/'); ?>img/favicon/favicon.ico" />
 
-<body id="page-top">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/fonts/boxicons.css" />
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/demo.css" />
 
-            <!-- Main Content -->
-            <div id="content">
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid mt-5">
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/css/pages/page-misc.css" />
+    <!-- Helpers -->
+    <script src="<?= base_url('assets/'); ?>vendor/js/helpers.js"></script>
 
-                    <!-- 404 Error Text -->
-                    <div class="text-center">
-                        <div class="error mx-auto" data-text="403">403</div>
-                        <p class="lead text-gray-800 mb-5">Access Forbidden</p>
-                        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-                        <a href="<?= base_url('home'); ?>">&larr; Back to Home</a>
-                    </div>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="<?= base_url('assets/'); ?>js/config.js"></script>
+  </head>
 
-                </div>
-                <!-- /.container-fluid -->
+  <body>
+    <!-- Content -->
 
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <?=date('Y');?> </span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
+    <!-- Error -->
+    <div class="container-xxl container-p-y">
+      <div class="misc-wrapper">
+        <h2 class="mb-2 mx-2">Page Not Found :(</h2>
+        <p class="mb-4 mx-2">Oops! 😖 The requested URL was not found on this server.</p>
+        <a href="<?= base_url(); ?>" class="btn btn-primary">Back to home</a>
+        <div class="mt-3">
+          <img
+            src="<?= base_url('assets/'); ?>img/illustrations/page-misc-error-light.png"
+            alt="page-misc-error-light"
+            width="500"
+            class="img-fluid"
+            data-app-dark-img="illustrations/page-misc-error-dark.png"
+            data-app-light-img="illustrations/page-misc-error-light.png"
+          />
         </div>
-        <!-- End of Content Wrapper -->
-
+      </div>
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- /Error -->
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- / Content -->
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url('assets/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="<?= base_url('assets/'); ?>vendor/libs/jquery/jquery.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendor/libs/popper/popper.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendor/js/bootstrap.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendor/js/menu.js"></script>
+    <!-- endbuild -->
 
-</body>
+    <!-- Vendors JS -->
 
+    <!-- Main JS -->
+    <script src="<?= base_url('assets/'); ?>js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
 </html>

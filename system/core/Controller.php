@@ -36,7 +36,10 @@
  * @since	Version 1.0.0
  * @filesource
  */
-defined('BASEPATH') OR exit('No direct script access allowed');
+
+require_once APPPATH . 'libraries/Format.php';
+
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Application Controller Class
@@ -50,7 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/general/controllers.html
  */
-class CI_Controller {
+class CI_Controller
+{
 
 	/**
 	 * Reference to the CI singleton
@@ -66,6 +70,18 @@ class CI_Controller {
 	 */
 	public $load;
 
+	public $HTTP_OK = 200;
+	public $HTTP_CREATED = 201;
+	public $HTTP_NOT_MODIFIED = 304;
+	public $HTTP_BAD_REQUEST = 400;
+	public $HTTP_UNAUTHORIZED = 401;
+	public $HTTP_FORBIDDEN = 403;
+	public $HTTP_NOT_FOUND = 404;
+	public $HTTP_METHOD_NOT_ALLOWED = 405;
+	public $HTTP_NOT_ACCEPTABLE = 406;
+	public $HTTP_INTERNAL_ERROR = 500;
+	public $HTTP_UNAVAILABLE = 503;
+
 	/**
 	 * Class constructor
 	 *
@@ -78,8 +94,7 @@ class CI_Controller {
 		// Assign all the class objects that were instantiated by the
 		// bootstrap file (CodeIgniter.php) to local class variables
 		// so that CI can run as one big super object.
-		foreach (is_loaded() as $var => $class)
-		{
+		foreach (is_loaded() as $var => $class) {
 			$this->$var =& load_class($class);
 		}
 
@@ -88,10 +103,14 @@ class CI_Controller {
 		log_message('info', 'Controller Class Initialized');
 	}
 
-	public function debug($array){
-		echo '<pre>'; print_r($array); echo '</pre>';
-		die;  
+	public function debug($array)
+	{
+		echo '<pre>';
+		print_r($array);
+		echo '</pre>';
+		die;
 	}
+
 	// --------------------------------------------------------------------
 
 	/**
