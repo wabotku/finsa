@@ -29,7 +29,9 @@
 <!-- Vendors CSS -->
 <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/libs/apex-charts/apex-charts.css" />
+<link rel="stylesheet" href="<?= base_url('assets/'); ?>vendor/css/datatables.min.css" />
 
 <!-- Page CSS -->
 <script src="<?= base_url('assets/'); ?>vendor/js/helpers.js"></script>
 <script src="<?= base_url('assets/'); ?>js/config.js"></script>
+<script src="<?= base_url('assets/'); ?>vendor/js/datatables.min.js"></script>
